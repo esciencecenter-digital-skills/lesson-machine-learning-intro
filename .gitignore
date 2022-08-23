@@ -49,3 +49,5 @@ docs/
 # translation temp files
 po/*~
 
+# R project files
+*.Rproj
