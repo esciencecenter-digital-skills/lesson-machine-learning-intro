@@ -1,10 +1,11 @@
-# The Carpentries Workbench Template Markdown Lesson
+# Introduction to applying machine learning to research with Python
+In this lesson you will learn how to apply machine learning to research problems.
+You will learn how to prepare your data for machine learning, 
+how to train classification and regression algorithms in a few lines of code with scikit-learn,
+and how to evaluate the performance of your machine learning models.
 
-This lesson is a template lesson that uses [The Carpentries Workbench][workbench].
+## Target audience
+This lesson is targeted to (academic) researchers that already know a bit of Python programming
+and want to apply machine learning to their data.
 
-To get started using this template, visit https://github.com/carpentries/workbench-template-md/generate
-and follow the instructions.
-
-If you have any questions, contact [@zkamvar](https://github.com/zkamvar)
-
-[workbench]: https://carpentries.github.io/sandpaper-docs/
+This lesson uses [The Carpentries Workbench][https://carpentries.github.io/sandpaper-docs/].
