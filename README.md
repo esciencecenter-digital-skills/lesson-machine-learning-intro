@@ -1,4 +1,4 @@
-# Introduction to applying machine learning to research with Python
+# Applying machine learning to research with Python
 In this lesson you will learn how to apply machine learning to research problems.
 You will learn how to prepare your data for machine learning, 
 how to train classification and regression algorithms in a few lines of code with scikit-learn,
