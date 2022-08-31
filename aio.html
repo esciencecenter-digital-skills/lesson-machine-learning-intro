@@ -198,6 +198,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush4">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading4">
+        <a href="03-data-preparation.html">3. Preparing your data for machine learning</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -321,7 +333,7 @@
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -351,7 +363,7 @@
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a <code>solution</code> tag.</p>
 </div>
@@ -461,7 +473,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Unsupervised</li>
@@ -537,7 +549,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>A supervised binary classification task.</p>
 </div>
@@ -619,7 +631,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="how-many-features-and-samples">1. &amp; 2. How many features and samples??<a class="anchor" aria-label="anchor" href="#how-many-features-and-samples"></a>
@@ -766,6 +778,132 @@ any links that you are not going to use.
 <li>Use the machine learning workflow to tackle a machine learning problem in a structured way</li>
 <li>Get to know the dataset before diving into a machine learning task</li>
 <li>Use an independent testset for evaluating your results</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-03-data-preparation"><p>Content from <a href="03-data-preparation.html">Preparing your data for machine learning</a></p>
+<hr>
+<p> Last updated on 2022-08-31 | <a href="https://github.com/esciencecenter-digital-skills/lesson-machine-learning-intro/edit/main/episodes/03-data-preparation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do I check for missing data?</li>
+<li>How can I scale the data?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Know how to check for missing data</li>
+<li>Be able to scale your data using scikitlearn’s scalers</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="missing-data"><h2 class="section-heading">Missing data<a class="anchor" aria-label="anchor" href="#missing-data"></a>
+</h2>
+<hr class="half-width">
+<p>We splitted our data into train and test, but did not make any other modifications. To make our data fit for machine learning, we need to:</p>
+<ul>
+<li>Handle missing, corrupt or incorrect data</li>
+<li>Do feature normalization</li>
+</ul>
+<p>Let’s start by looking how much missing data we have:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>weather_train <span class="op">=</span> pd.read_csv(<span class="st">'data/weather_train.csv'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>weather_train.isna().<span class="bu">sum</span>().<span class="bu">sum</span>()</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="fl">0</span></span></code></pre>
+</div>
+<p>We have no missing values so we can continue.</p>
+<p>It could also be that we have corrupt data, leading e.g. to outliers in the data set. The pair plot in the previous episode could have hinted to this. For this dataset, we don’t need to do anything about outliers.</p>
+</section><section id="feature-normalization"><h2 class="section-heading">Feature normalization<a class="anchor" aria-label="anchor" href="#feature-normalization"></a>
+</h2>
+<hr class="half-width">
+<p>As we saw in the pairplot, the magnitudes of the different features are not directly comparable with each other. Some of the features are in mm, others in degrees celcius, and the scales are different.</p>
+<p>Most Machine Learning algorithms regard all features together in one multi-dimensional space. To do calculations in this space that make sense, the features should be comparable to each other, e.g. they should be scaled. There are two options for scaling:</p>
+<ul>
+<li>Normalization (Min-Max scaling)</li>
+<li>Standardization (scale by mean and variance)</li>
+</ul>
+<p>In this case, we choose min_max scaling, because we do not know much about the distribution of our features. If we know that (some) features have a normal distribution, it makes more sense to do standardization.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sklearn.preprocessing</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>min_max_scaler <span class="op">=</span> sklearn.preprocessing.MinMaxScaler()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>feature_names <span class="op">=</span> weather_train.columns[:<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>weather_train_scaled <span class="op">=</span> weather_train.copy()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>weather_train_scaled[feature_names] <span class="op">=</span> min_max_scaler.fit_transform(weather_train[feature_names])</span></code></pre>
+</div>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="exercise-comparing-distributions" class="callout-inner">
+<h3 class="callout-title">Exercise: Comparing distributions<a class="anchor" aria-label="anchor" href="#exercise-comparing-distributions"></a>
+</h3>
+<div class="callout-content">
+<p>Compare the distributions of the numerical features before and after scaling. What do you notice?</p>
+</div>
+</div>
+</div>
+<p>Let’s look at the statistics before scaling:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>weather_train.describe()</span></code></pre>
+</div>
+<p>And after scaling:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>weather_train_scaled.describe()</span></code></pre>
+</div>
+<p>We save the data to use in our next notebook</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>weather_train_scaled.to_csv(<span class="st">'data/weather_train_scaled.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#NA"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>You can check for missing data using <code>pandas</code> <code>.isna()</code> method</li>
+<li>You can scale your data using a scaler from the <code>sklearn.preprocessing</code> module</li>
 </ul>
 </div>
 </div>
