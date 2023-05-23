@@ -281,12 +281,12 @@
 <strong>Supervised</strong> models try to predict a (dependent) variable, called the <em>target</em>, that is available during training time</li>
 <li>
 <strong>Unsupervised</strong> models try to find structure or patterns in the data, without a specific target</li>
-</ul><div id="challenge1" class="callout challenge">
+</ul><div id="challenge-supervised-or-unsupervised" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-supervised-or-unsupervised" class="callout-inner">
-<h3 class="callout-title">Challenge: Supervised or unsupervised<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Challenge: Supervised or unsupervised<a class="anchor" aria-label="anchor" href="#challenge-supervised-or-unsupervised"></a>
 </h3>
 <div class="callout-content">
 <p>For the following problems, do you think you need a supervised or unsupervised approach?</p>
@@ -327,12 +327,12 @@
 <li>Choose optimal model / parameter settings based on some metric</li>
 </ul></li>
 <li>Calculate final model performance on the test set</li>
-</ol><div id="callout1" class="callout callout">
+</ol><div id="discussion" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="discussion" class="callout-inner">
-<h3 class="callout-title">Discussion<a class="anchor" aria-label="anchor" href="#callout1"></a>
+<h3 class="callout-title">Discussion<a class="anchor" aria-label="anchor" href="#discussion"></a>
 </h3>
 <div class="callout-content">
 <p>Why is it important to reserve part of your data as test set? What can go wrong in choosing a test set?</p>
@@ -353,12 +353,12 @@
 </h2>
 <hr class="half-width"><p>Here we want to work with the weather prediction dataset. It contains daily weather observations from 18 different European cities or places through the years 2000 to 2010. For all locations the data contains the variables ‘mean temperature’, ‘max temperature’, and ‘min temperature’. In addition, for multiple of the following variables are provided: ‘cloud_cover’, ‘wind_speed’, ‘wind_gust’, ‘humidity’, ‘pressure’, ‘global_radiation’, ‘precipitation’, ‘sunshine’, but not all of them are provided for all locations. A more extensive description of the dataset including the different physical units is given in accompanying metadata file.</p>
 <figure><img src="https://raw.githubusercontent.com/carpentries-incubator/deep-learning-intro/b09d4d5dc2f730478f3caf7e81542865afc333e3/fig/03_weather_prediction_dataset_map.png" class="figure mx-auto d-block"></figure><p>There are several tasks that one could think of given this data. For now, we are intested in the question: how likely is it to be nice weather for a barbecue tomorrow (that is, sunny and no rain) in Basel, given the weather conditions in all cities today?</p>
-<div id="challenge2" class="callout challenge">
+<div id="challenge-what-kind-of-task" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-what-kind-of-task" class="callout-inner">
-<h3 class="callout-title">Challenge: What kind of task?<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+<h3 class="callout-title">Challenge: What kind of task?<a class="anchor" aria-label="anchor" href="#challenge-what-kind-of-task"></a>
 </h3>
 <div class="callout-content">
 <p>What kind of machine learning task is this?</p>
@@ -429,12 +429,12 @@
 <span>    <span class="va">BASEL_humidity</span></span>
 <span>    <span class="va">...</span></span></code></pre>
 </div>
-<div id="challenge3" class="callout challenge">
+<div id="challenge-explore-weather-dataset" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-explore-weather-dataset" class="callout-inner">
-<h3 class="callout-title">Challenge: Explore weather dataset<a class="anchor" aria-label="anchor" href="#challenge3"></a>
+<h3 class="callout-title">Challenge: Explore weather dataset<a class="anchor" aria-label="anchor" href="#challenge-explore-weather-dataset"></a>
 </h3>
 <div class="callout-content">
 <p>Explore the dataset with pandas:</p>
@@ -564,12 +564,13 @@
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(data_plot, hue<span class="op">=</span><span class="st">'BASEL_BBQ_weather'</span>)</span></code></pre>
 </div>
-<figure>Output: <img src="../fig/weather-pairplot.png" class="figure mx-auto d-block"></figure><div id="discussion1" class="callout discussion">
+<p>Output: <img src="../fig/weather-pairplot.png" class="figure"></p>
+<div id="exercise-observe-the-pairplot" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="exercise-observe-the-pairplot" class="callout-inner">
-<h3 class="callout-title">Exercise: Observe the pairplot<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+<h3 class="callout-title">Exercise: Observe the pairplot<a class="anchor" aria-label="anchor" href="#exercise-observe-the-pairplot"></a>
 </h3>
 <div class="callout-content">
 <p>Discuss what you see in the scatter plots and write down any observations. Think of:</p>
@@ -627,7 +628,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.16" class="external-link">sandpaper (0.11.16)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.12.0" class="external-link">sandpaper (0.12.0)</a>,
         <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
@@ -651,7 +652,7 @@ any links that you are not going to use.
   "identifier": "https://esciencecenter-digital-skills.github.io/lesson-machine-learning-intro/instructor/02-data-exploration.html",
   "dateCreated": "2023-01-19",
   "dateModified": "2022-08-31",
-  "datePublished": "2023-05-16"
+  "datePublished": "2023-05-23"
 }
 
   </script><script>
