@@ -27,7 +27,7 @@
             <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
           </abbr>
         </span>
-        
+
       </div>
     </div>
     <div class="selector-container">
@@ -56,7 +56,7 @@
             </li>
           </ul></li>
       </div>
-      
+
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
@@ -179,7 +179,7 @@
                 </div><!--/div.accordion-flush-->
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
-      
+
             <hr></div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordionFlush11">
@@ -198,7 +198,7 @@
     <div class="accordion-header" id="flush-heading1">
         <a href="index.html">Summary and Schedule</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -207,7 +207,7 @@
     <div class="accordion-header" id="flush-heading2">
         <a href="01-introduction.html">1. Using Markdown</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -216,7 +216,7 @@
     <div class="accordion-header" id="flush-heading3">
         <a href="02-data-exploration.html">2. Exploring the dataset</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -230,14 +230,14 @@
         </span>
       </button>
     </div><!--/div.accordion-header-->
-        
+
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#missing-data">Missing data</a></li>
 <li><a href="#feature-normalization">Feature normalization</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -268,10 +268,10 @@
               </div>
             </div>
             <hr class="half-width resources"><a href="../instructor/aio.html">See all in one page</a>
-            
+
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
-            
+
             </div>
           </div><!-- /div.accordion -->
         </div><!-- /div.sidebar-inner -->
@@ -299,13 +299,13 @@
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Preparing your data for machine learning</h1>
         <p>Last updated on 2022-08-31 |
-        
+
         <a href="https://github.com/esciencecenter-digital-skills/lesson-machine-learning-intro/edit/main/episodes/03-data-preparation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-        
-        
-        
+
+
+
         <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
-        
+
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -335,8 +335,8 @@
 </div>
 </div>
 </div>
-<section id="missing-data"><h2 class="section-heading">Missing data<a class="anchor" aria-label="anchor" href="#missing-data"></a>
-</h2>
+<section><h2 class="section-heading" id="missing-data">Missing data<a class="anchor" aria-label="anchor" href="#missing-data"></a>
+<a class="anchor" aria-label="anchor" href="#missing-data"></a></h2>
 <hr class="half-width"><p>We splitted our data into train and test, but did not make any other modifications. To make our data fit for machine learning, we need to:</p>
 <ul><li>Handle missing, corrupt or incorrect data</li>
 <li>Do feature normalization</li>
@@ -355,8 +355,8 @@
 </div>
 <p>We have no missing values so we can continue.</p>
 <p>It could also be that we have corrupt data, leading e.g. to outliers in the data set. The pair plot in the previous episode could have hinted to this. For this dataset, we don’t need to do anything about outliers.</p>
-</section><section id="feature-normalization"><h2 class="section-heading">Feature normalization<a class="anchor" aria-label="anchor" href="#feature-normalization"></a>
-</h2>
+</section><section><h2 class="section-heading" id="feature-normalization">Feature normalization<a class="anchor" aria-label="anchor" href="#feature-normalization"></a>
+<a class="anchor" aria-label="anchor" href="#feature-normalization"></a></h2>
 <hr class="half-width"><p>As we saw in the pairplot, the magnitudes of the different features are not directly comparable with each other. Some of the features are in mm, others in degrees celcius, and the scales are different.</p>
 <p>Most Machine Learning algorithms regard all features together in one multi-dimensional space. To do calculations in this space that make sense, the features should be comparable to each other, e.g. they should be scaled. There are two options for scaling:</p>
 <ul><li>Normalization (Min-Max scaling)</li>
@@ -416,9 +416,9 @@
 </ul></div>
 </div>
 </div>
-<!-- 
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
+any links that you are not going to use.
  -->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
@@ -443,18 +443,18 @@ any links that you are not going to use.
       		<footer class="row footer mx-md-3"><hr><div class="col-md-6">
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
-        
+
         <a href="https://github.com/esciencecenter-digital-skills/lesson-machine-learning-intro/edit/main/episodes/03-data-preparation.md" class="external-link">Edit on GitHub</a>
-        
+
 	
         | <a href="https://github.com/esciencecenter-digital-skills/lesson-machine-learning-intro/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/esciencecenter-digital-skills/lesson-machine-learning-intro/" class="external-link">Source</a></p>
 				<p><a href="https://github.com/esciencecenter-digital-skills/lesson-machine-learning-intro/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:training@esciencecenter.nl">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
-        
+
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
-        
+
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.5" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.3" class="external-link">varnish (1.0.3)</a></p>
 			</div>
@@ -479,7 +479,7 @@ any links that you are not going to use.
   "identifier": "https://esciencecenter-digital-skills.github.io/lesson-machine-learning-intro/instructor/03-data-preparation.html",
   "dateCreated": "2023-01-19",
   "dateModified": "2022-08-31",
-  "datePublished": "2024-07-02"
+  "datePublished": "2024-07-09"
 }
 
   </script><script>
