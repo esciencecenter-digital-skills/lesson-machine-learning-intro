@@ -249,10 +249,10 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
                     RESOURCES
                   </button>
                 </h2>
@@ -271,7 +271,7 @@
                 </div>
               </div>
             </div>
-            <hr class="half-width resources"><a href="../instructor/aio.html">See all in one page</a>
+            <hr class="half-width lesson-resources"><a href="../instructor/aio.html">See all in one page</a>
 
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
@@ -341,8 +341,7 @@
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="supervised-versus-unsupervised-machine-learning">Supervised versus unsupervised machine learning<a class="anchor" aria-label="anchor" href="#supervised-versus-unsupervised-machine-learning"></a>
-<a class="anchor" aria-label="anchor" href="#supervised-versus-unsupervised-machine-learning"></a></h2>
+<section><h2 class="section-heading" id="supervised-versus-unsupervised-machine-learning">Supervised versus unsupervised machine learning<a class="anchor" aria-label="anchor" href="#supervised-versus-unsupervised-machine-learning"></a></h2>
 <hr class="half-width"><p>Remember we make the following distinction:</p>
 <ul><li>
 <strong>Supervised</strong> models try to predict a (dependent) variable, called the <em>target</em>, that is available during training time</li>
@@ -353,8 +352,7 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-supervised-or-unsupervised" class="callout-inner">
-<h3 class="callout-title">Challenge: Supervised or unsupervised<a class="anchor" aria-label="anchor" href="#challenge-supervised-or-unsupervised"></a>
-</h3>
+<h3 class="callout-title">Challenge: Supervised or unsupervised</h3>
 <div class="callout-content">
 <p>For the following problems, do you think you need a supervised or unsupervised approach?</p>
 <ol style="list-style-type: decimal"><li>Find numerical representations for words in a language (<em>word vectors</em>) that contain semantic information on the word</li>
@@ -381,8 +379,7 @@
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="machine-learning-workflow">Machine learning workflow<a class="anchor" aria-label="anchor" href="#machine-learning-workflow"></a>
-<a class="anchor" aria-label="anchor" href="#machine-learning-workflow"></a></h2>
+</section><section><h2 class="section-heading" id="machine-learning-workflow">Machine learning workflow<a class="anchor" aria-label="anchor" href="#machine-learning-workflow"></a></h2>
 <hr class="half-width"><p>For most machine learning approaches, we have to take the following steps:</p>
 <ol style="list-style-type: decimal"><li>Data cleaning and preperation</li>
 <li>Split data into train and test set</li>
@@ -397,8 +394,7 @@
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="discussion" class="callout-inner">
-<h3 class="callout-title">Discussion<a class="anchor" aria-label="anchor" href="#discussion"></a>
-</h3>
+<h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
 <p>Why is it important to reserve part of your data as test set? What can go wrong in choosing a test set?</p>
 </div>
@@ -414,8 +410,7 @@
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="weather-prediction-dataset">Weather prediction dataset<a class="anchor" aria-label="anchor" href="#weather-prediction-dataset"></a>
-<a class="anchor" aria-label="anchor" href="#weather-prediction-dataset"></a></h2>
+</section><section><h2 class="section-heading" id="weather-prediction-dataset">Weather prediction dataset<a class="anchor" aria-label="anchor" href="#weather-prediction-dataset"></a></h2>
 <hr class="half-width"><p>Here we want to work with the weather prediction dataset. It contains daily weather observations from 18 different European cities or places through the years 2000 to 2010. For all locations the data contains the variables ‘mean temperature’, ‘max temperature’, and ‘min temperature’. In addition, for multiple of the following variables are provided: ‘cloud_cover’, ‘wind_speed’, ‘wind_gust’, ‘humidity’, ‘pressure’, ‘global_radiation’, ‘precipitation’, ‘sunshine’, but not all of them are provided for all locations. A more extensive description of the dataset including the different physical units is given in accompanying metadata file.</p>
 <figure><img src="https://raw.githubusercontent.com/carpentries-incubator/deep-learning-intro/b09d4d5dc2f730478f3caf7e81542865afc333e3/fig/03_weather_prediction_dataset_map.png" class="figure mx-auto d-block"></figure><p>There are several tasks that one could think of given this data. For now, we are intested in the question: how likely is it to be nice weather for a barbecue tomorrow (that is, sunny and no rain) in Basel, given the weather conditions in all cities today?</p>
 <div id="challenge-what-kind-of-task" class="callout challenge">
@@ -423,8 +418,7 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-what-kind-of-task" class="callout-inner">
-<h3 class="callout-title">Challenge: What kind of task?<a class="anchor" aria-label="anchor" href="#challenge-what-kind-of-task"></a>
-</h3>
+<h3 class="callout-title">Challenge: What kind of task?</h3>
 <div class="callout-content">
 <p>What kind of machine learning task is this?</p>
 </div>
@@ -497,8 +491,7 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-explore-weather-dataset" class="callout-inner">
-<h3 class="callout-title">Challenge: Explore weather dataset<a class="anchor" aria-label="anchor" href="#challenge-explore-weather-dataset"></a>
-</h3>
+<h3 class="callout-title">Challenge: Explore weather dataset</h3>
 <div class="callout-content">
 <p>Explore the dataset with pandas:</p>
 <ol style="list-style-type: decimal"><li>How many features do we have to predict the BBQ weather?</li>
@@ -548,8 +541,7 @@
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="data-selection">Data selection<a class="anchor" aria-label="anchor" href="#data-selection"></a>
-<a class="anchor" aria-label="anchor" href="#data-selection"></a></h2>
+</section><section><h2 class="section-heading" id="data-selection">Data selection<a class="anchor" aria-label="anchor" href="#data-selection"></a></h2>
 <hr class="half-width"><p>For the purposes of this lesson, we select only the first 3 years. We also remove all columns that cannot be used for prediction, and merge the features and labels into one dataframe.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -575,8 +567,7 @@
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>weather_3years.head()</span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="split-into-train-and-test">Split into train and test<a class="anchor" aria-label="anchor" href="#split-into-train-and-test"></a>
-<a class="anchor" aria-label="anchor" href="#split-into-train-and-test"></a></h2>
+</section><section><h2 class="section-heading" id="split-into-train-and-test">Split into train and test<a class="anchor" aria-label="anchor" href="#split-into-train-and-test"></a></h2>
 <hr class="half-width"><p>Before doing further exploration of the data, we held out part of the data as test set for later. This way, no information from the test set will leak to the model we are going to create</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -609,8 +600,7 @@
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>data_train.to_csv(<span class="st">'data/weather_train.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>data_test.to_csv(<span class="st">'data/weather_test.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="some-more-data-exploration-using-visualization">Some more data exploration using visualization<a class="anchor" aria-label="anchor" href="#some-more-data-exploration-using-visualization"></a>
-<a class="anchor" aria-label="anchor" href="#some-more-data-exploration-using-visualization"></a></h2>
+</section><section><h2 class="section-heading" id="some-more-data-exploration-using-visualization">Some more data exploration using visualization<a class="anchor" aria-label="anchor" href="#some-more-data-exploration-using-visualization"></a></h2>
 <hr class="half-width"><p>Let’s visualize the numerical feature columns. One nice visualization for datasets with relatively few attributes is the Pair Plot. This can be created using <code>sns.pairplot(...)</code>. It shows a scatterplot of each attribute plotted against each of the other attributes. By using the <code>hue='BASEL_BBQ_weather'</code> setting for the pairplot the graphs on the diagonal are layered kernel density estimate plots.</p>
 <p>Because we have so many features, we plot the features only for Basel itself (not the other cities).</p>
 <p>Note that we use a list comprehension here, a short notation for creating a new list based on values in an existing list</p>
@@ -631,8 +621,7 @@
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="exercise-observe-the-pairplot" class="callout-inner">
-<h3 class="callout-title">Exercise: Observe the pairplot<a class="anchor" aria-label="anchor" href="#exercise-observe-the-pairplot"></a>
-</h3>
+<h3 class="callout-title">Exercise: Observe the pairplot</h3>
 <div class="callout-content">
 <p>Discuss what you see in the scatter plots and write down any observations. Think of:</p>
 <ul><li>Are the classes easily separable based on these features?</li>
@@ -646,8 +635,7 @@
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
-</h3>
+<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>Use the machine learning workflow to tackle a machine learning problem in a structured way</li>
 <li>Get to know the dataset before diving into a machine learning task</li>
@@ -695,7 +683,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.5" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.3" class="external-link">varnish (1.0.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.6" class="external-link">sandpaper (0.16.6)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.4" class="external-link">varnish (1.0.4)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -718,7 +706,7 @@ any links that you are not going to use.
   "identifier": "https://esciencecenter-digital-skills.github.io/lesson-machine-learning-intro/instructor/02-data-exploration.html",
   "dateCreated": "2023-01-19",
   "dateModified": "2022-08-31",
-  "datePublished": "2024-08-20"
+  "datePublished": "2024-08-27"
 }
 
   </script><script>
